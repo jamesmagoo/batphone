@@ -6,8 +6,7 @@ import Track from '../songs/Track';
 class Songs extends Component {
     render() {
         return (
-            <Consumer>
-                
+            <Consumer> 
                 { value => {
                     const { track_list, heading} = value;
 
@@ -16,8 +15,8 @@ class Songs extends Component {
                     }else{
                         return(
                             <React.Fragment>
-                                <h6 className="text-center mb-4">{heading}</h6>
-                                <div className="row">
+                                <div className="col-sm border border-dark">
+                                    <h6 className="text-center mb-4">{heading}</h6>
                                     {track_list.map(item =>(
                                         <Track key = {item.track.track_id} track = {item.track}/>
                                     )
