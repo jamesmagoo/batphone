@@ -36,4 +36,4 @@ class Apparitions extends Component {
         )
     }
 }
-export default ApparitionList;
+export default Apparitions;
