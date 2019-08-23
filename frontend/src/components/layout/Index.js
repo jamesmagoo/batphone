@@ -1,9 +1,6 @@
 import React from 'react'
 import Songs from '../songs/Songs';
-import ApparitionFeed from '../apparitions/ApparitionFeed' ;
-import SearchSongs from '../songs/SearchSongs';
-import SelectedSong from '../songs/SelectedSong';
-import ApparitionInput from '../apparitions/ApparitionInput';
+import Apparitions from '../apparitions/Apparitions';
 
 const Index = () => {
     return (
@@ -11,12 +8,9 @@ const Index = () => {
             <div container>
             <div className="row">
                 <div className="col-8">
-                    <SelectedSong/>
-                    <ApparitionInput/>
-                    <ApparitionFeed/>
+                    <Apparitions/>
                 </div>
                 <div className="col-4">
-                    <SearchSongs/>
                     <Songs/>
                 </div>
             </div>

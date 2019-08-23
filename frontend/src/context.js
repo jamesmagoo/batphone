@@ -23,7 +23,7 @@ export class Provider extends Component {
         
         ],
 
-        heading: "Song List Component",
+        heading: "Songs",
         dispatch : action => this.setState(state => reducer(state, action))
     };
 

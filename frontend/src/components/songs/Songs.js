@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import Spinner from '../layout/Spinner';
 import Track from '../songs/Track';
+import SearchSongs from './SearchSongs';
 
 class Songs extends Component {
     render() {
         return (
+            <div className="border border-dark">
+            <React.Fragment >
+            <SearchSongs/>
             <Consumer> 
                 { value => {
                     const { track_list, heading} = value;
@@ -27,6 +31,8 @@ class Songs extends Component {
                     }
                 }}
             </Consumer>
+            </React.Fragment>
+            </div>
         )
     }
 }

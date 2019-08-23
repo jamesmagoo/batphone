@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class SelectedSong extends Component {
-    render() {
+       
+        render() {
         return (
             <React.Fragment>
                <div class="card mb-4 shadow-sm">

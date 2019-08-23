@@ -3,9 +3,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/layout/Navbar';
-import Index from './components/layout/Index';
+import Songs from './components/songs/Songs';
 
-import { Provider } from './context'
+import { Provider } from './context';
+import Apparitions from './components/apparitions/Apparitions';
 
 
 function App() {
@@ -15,11 +16,18 @@ function App() {
       <React.Fragment>
         <Navbar/>
           <div className="container">
-            <Switch>
-              <Route exact path ="/" component = {Index} />
-            </Switch>
+              <div className="row">
+                  <div className="col-8">
+                      <Apparitions/>
+                  </div>
+                  <div className="col-4">
+                      <Songs/>
+                  </div>
+              </div>
           </div>
+
       </React.Fragment>
+
     </Router>
     </Provider>
   );
