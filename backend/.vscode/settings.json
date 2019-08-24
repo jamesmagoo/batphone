@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\James McGauran\\Desktop\\batphone\\backend\\env1\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\James McGauran\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
     "python.linting.pep8Enabled": false,
     "python.linting.pylintPath": "C:\\Users\\James McGauran\\Desktop\\batphone\\backend\\env1\\Scripts\\pylint",
     "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
