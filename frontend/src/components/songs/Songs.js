@@ -7,7 +7,7 @@ import SearchSongs from './SearchSongs';
 class Songs extends Component {
     render() {
         return (
-            <div className="border border-dark">
+            <div>
             <React.Fragment >
             <SearchSongs/>
             <Consumer> 
@@ -19,7 +19,7 @@ class Songs extends Component {
                     }else{
                         return(
                             <React.Fragment>
-                                <div className="col-sm border border-dark">
+                                <div className="col-sm">
                                     <h6 className="text-center mb-4">{heading}</h6>
                                     {track_list.map(item =>(
                                         <Track key = {item.track.track_id} track = {item.track}/>

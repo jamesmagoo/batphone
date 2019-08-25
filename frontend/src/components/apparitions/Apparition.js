@@ -1,36 +1,17 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
-class Apparition extends React.Component {
-  render() {
+const Apparition = (props) =>{
+   const { apparitions } = props;
     return (
-      <div>
         <Fade bottom>
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-          <h1 className="text-center bg-light border border-dark">Apparition</h1>      
-                
+               <div className="mb-4">
+                   <h6>{apparitions.author}</h6>
+                   <h6>{apparitions.content}</h6>
+                   <h6>{apparitions.created_at}</h6>
+                </div> 
         </Fade>
-      </div>
     );
-  }
-}
+};
 
 export default Apparition;

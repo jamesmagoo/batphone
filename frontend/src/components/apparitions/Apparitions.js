@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ApparitionFeed from './ApparitionFeed';
+import Apparition from './Apparition';
 import ApparitionInput from './ApparitionInput';
 import SelectedSong from './SelectedSong';
 import axios from 'axios' ; 
@@ -7,30 +7,28 @@ import axios from 'axios' ;
 class Apparitions extends Component {
 
     state={
-        song:{},
-        artist:{}
+        apparitions : []
     };
 
-    // componentDidMount(){
-    //     axios.get(`https://cors-anywhere.herokuapp.com/
-    //     https://api.musixmatch.com/ws/1.1/
-    //     track.get?commontrack_id=${this.props.match.params.id}
-    //     &apikey=${process.env.REACT_APP_MM_KEY}`)
-    //     .then(res => {
-    //         console.log(res.data);
-    //         this.setState({song : res.data.message.body.track});
-    //     })
-    //     .catch(err => console.log(err)) ;
+    componentDidMount(){
+         axios.get(`http://127.0.0.1:8000/api/`)
+         .then(res => {
+             console.log(res.data);
+             this.setState({apparitions: res.data});
+        })
+         .catch(err => console.log(err)) ;
   
-    // };
+     };
 
     render() {
         return (
-            <div className="col-sm border border-dark">
+            <div className="col-sm">
                 <React.Fragment>
                     <SelectedSong/>
                     <ApparitionInput/>
-                    <ApparitionFeed/>
+                    {this.state.apparitions.map(item =>(
+                     <Apparition key = {item.id} apparitions = {item}/>
+                                    ))}
                 </React.Fragment>
             </div>
         )

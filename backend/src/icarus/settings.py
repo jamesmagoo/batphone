@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'corsheaders',
     'rest_framework',
     'apparitions',
     
@@ -39,6 +40,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #CORS Headers
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'icarus.urls'
@@ -125,3 +128,5 @@ REST_FRAMEWORK = {
 # Custom User Model
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+CORS_ORIGIN_ALLOW_ALL = True 

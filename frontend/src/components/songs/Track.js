@@ -9,7 +9,7 @@ const Track = (props) => {
                    <h6>{track.track_name}</h6>
                    <h6>{track.artist_name}</h6>
                 </div>
-                <Link to={`/apparitions/song/${track.track_id}`} className="btn btn-dark btn-sm stretched-link" activeClassName="songselected"> 
+                <Link to={`/apparitions/song/${track.track_id}`} className="btn btn-dark btn-sm stretched-link"> 
                     >EYE LOGO>
                 </Link> 
             </div>
