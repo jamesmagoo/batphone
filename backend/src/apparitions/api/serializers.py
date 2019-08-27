@@ -4,4 +4,4 @@ from apparitions.models import Apparition
 class ApparitionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Apparition
-        fields = ('author','content','created_at') 
+        fields = ('pk','author','content','created_at') 

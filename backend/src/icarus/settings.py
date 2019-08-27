@@ -1,4 +1,5 @@
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,6 +30,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'apparitions',
+    'songs',
     
 ]
 
@@ -130,3 +132,5 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'users.CustomUser'
 
 CORS_ORIGIN_ALLOW_ALL = True 
+
+SONG_APP_MM_KEY = config('SONG_APP_MM_KEY', default='')
