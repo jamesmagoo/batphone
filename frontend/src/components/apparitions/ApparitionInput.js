@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
 
 class ApparitionInput extends Component {
+
+    state = {
+
+        apparitionInput :''
+    }
+
+    submitApparition = (event) =>{
+        event.preventDefault();
+        const apparitionInput = event.target.elements.apparitionInput.value;
+
+        console.log(apparitionInput);
+
+    }
     render() {
         return (
             <div className="card card-body mb-4 p-4 text-center">
-                        <form>
+                        <form onSubmit={(event) => this.submitApparition(event)} label="apparitionInput">
                             <div className="form-group">
                                 <input type="text" 
                                 className="form-control" 
+                                name="apparitionInput"
                                 placeholder="Share an Apparition..."
                                 value={null}
                                 onChange={null}
                                 />
                             </div>
                         </form>
-                    <button className="btn btn-dark mb" type="submit">Share</button>
+                    <button className="btn btn-dark mb" type="submit" htmlType="submit" onClick={(event) => this.submitApparition(event)}>Share</button>
             </div> 
         )
     }

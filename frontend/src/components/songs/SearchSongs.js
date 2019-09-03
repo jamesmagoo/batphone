@@ -48,7 +48,7 @@ import { Consumer } from '../../context';
                                 />
                             </div>
                         </form>
-                        <button className="btn btn-dark mb" type="submit">Search</button>
+                        <button className="btn btn-dark mb" type="submit" onClick={this.findSong.bind(this, dispatch)}>Search</button>
                        </div> 
                     );
                 }}
