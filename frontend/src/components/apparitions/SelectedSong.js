@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+
 class SelectedSong extends Component {
-       
         render() {
         return (
             <React.Fragment>
                <div className="card mb-4 shadow-sm">
                 <div className="card-body">
-                    Selected Song Shows Here.
+                    <h3>...seeing now</h3>
+                    <br></br>
+                    <h6>{this.props.track} by {this.props.artist}</h6>
                 </div>
             </div>               
             </React.Fragment>

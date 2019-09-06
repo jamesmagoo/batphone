@@ -22,13 +22,13 @@ class ApparitionInput extends Component {
                                 <input type="text" 
                                 className="form-control" 
                                 name="apparitionInput"
-                                placeholder="Share an Apparition..."
+                                placeholder={this.props.placeholder}
                                 value={null}
                                 onChange={null}
                                 />
                             </div>
                         </form>
-                    <button className="btn btn-dark mb" type="submit" htmlType="submit" onClick={(event) => this.submitApparition(event)}>Share</button>
+                    <button className="btn btn-dark mb" type="submit" htmlType="submit" onClick={(event) => this.submitApparition(event)}>Plus EYE LOGO</button>
             </div> 
         )
     }

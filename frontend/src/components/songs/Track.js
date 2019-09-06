@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom' ;
 
 const Track = (props) => {
     const { track } = props;
+
+    
     return (
             <div className="card mb-4 shadow-sm">
-               <div className="card-body">
+               <div className="card-body" > 
                    <h6>{track.track_name}</h6>
                    <h6>{track.artist_name}</h6>
                 </div>

@@ -7,7 +7,10 @@ import axios from 'axios' ;
 class Apparitions extends Component {
 
     state={
-        apparitions : []
+        apparitions : [],
+        track : ['Venice Bitch'],
+        artist : ['Lana Del Rey'],
+        songID : ['123123'],
     };
 
     componentDidMount(){
@@ -24,8 +27,10 @@ class Apparitions extends Component {
         return (
             <div className="col-sm">
                 <React.Fragment>
-                    <SelectedSong/>
-                    <ApparitionInput/>
+                    <SelectedSong 
+                    track={this.state.track}
+                    artist={this.state.artist}/>
+                    <ApparitionInput placeholder={'Share your Apparition of ' + this.state.track + ' ...'} />
                     {this.state.apparitions.map(item =>(
                      <Apparition key = {item.id} apparitions = {item}/>
                                     ))}
