@@ -8,6 +8,7 @@ class SelectedSong extends Component {
                <div className="card mb-4 shadow-sm">
                 <div className="card-body">
                     <h3>...seeing now</h3>
+                    <h1>{this.props.songID}</h1>
                     <br></br>
                     <h6>{this.props.track} by {this.props.artist}</h6>
                 </div>

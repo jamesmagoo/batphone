@@ -9,25 +9,24 @@ import { Provider } from './context';
 import Apparitions from './components/apparitions/Apparitions';
 
 
+
+
 function App() {
   return (
     <Provider>
     <Router>
       <React.Fragment>
         <Navbar/>
-          <div className="container">
-              <div className="row">
-                  <div className="col-8">
-                      <Apparitions/>
-                  </div>
-                  <div className="col-4">
-                      <Songs/>
-                  </div>
-              </div>
-          </div>
-
+        <div className="container">
+        <div className="row">
+        <Switch>
+        <Route exact path="/" component = {Apparitions}></Route>
+        <Route path="/apparitions/song/:songID" component = {Apparitions}></Route>
+        </Switch>
+        <Songs/>
+        </div>
+        </div>
       </React.Fragment>
-
     </Router>
     </Provider>
   );

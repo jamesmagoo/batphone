@@ -6,14 +6,16 @@ import axios from 'axios' ;
 
 class Apparitions extends Component {
 
+
     state={
         apparitions : [],
         track : ['Venice Bitch'],
         artist : ['Lana Del Rey'],
-        songID : ['123123'],
+        songID : [],
     };
 
     componentDidMount(){
+
          axios.get(`http://127.0.0.1:8000/api/`)
          .then(res => {
              console.log(res.data);
@@ -23,20 +25,23 @@ class Apparitions extends Component {
   
      };
 
+
     render() {
         return (
-            <div className="col-sm">
+            <div className="col-8">
                 <React.Fragment>
                     <SelectedSong 
                     track={this.state.track}
-                    artist={this.state.artist}/>
-                    <ApparitionInput placeholder={'Share your Apparition of ' + this.state.track + ' ...'} />
+                    artist={this.state.artist}
+                    songID = {this.props.match.params.songID}/>
+                    <ApparitionInput placeholder={'Share your Apparition of ' + this.state.track + '...'} />
                     {this.state.apparitions.map(item =>(
-                     <Apparition key = {item.id} apparitions = {item}/>
+                    <Apparition key = {item.id} apparitions = {item}/>
                                     ))}
                 </React.Fragment>
             </div>
         )
     }
-}
+};
+
 export default Apparitions;

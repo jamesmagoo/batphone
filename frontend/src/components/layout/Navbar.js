@@ -11,7 +11,7 @@ const Navbar = () => {
                 <div className="navbar-nav">
                 <a className="nav-item nav-link active" >About <span className="sr-only">(current)</span></a>
                 <a className="nav-item nav-link" >Login</a>
-                <a className="nav-item nav-link" >Join</a>
+                <a className="nav-item nav-link" >Sign Up</a>
                 </div>
             </div>
         </nav>      
