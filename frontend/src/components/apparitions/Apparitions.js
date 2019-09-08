@@ -15,7 +15,7 @@ class Apparitions extends Component {
     };
 
     componentDidMount(){
-
+        // http://127.0.0.1:8000/api/${this.props.match.params.songID}
          axios.get(`http://127.0.0.1:8000/api/`)
          .then(res => {
              console.log(res.data);
