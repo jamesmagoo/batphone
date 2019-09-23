@@ -33,7 +33,7 @@ class Songs extends Component {
                     }
                 }}
             </Consumer>
-            </React.Fragment>
+            </React.Fragment> 
             </div>
         )
     }

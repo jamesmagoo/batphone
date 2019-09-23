@@ -10,7 +10,6 @@ class ApparitionListView(ListAPIView):
      queryset = Apparition.objects.all()
      serializer_class = ApparitionSerializer
 
-
 class ApparitionSongListView(ListAPIView):
      serializer_class = ApparitionSerializer
 

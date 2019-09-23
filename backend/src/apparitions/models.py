@@ -12,7 +12,7 @@ class SavedSong(models.Model):
 
 #Apparition Posts
 class Apparition(models.Model):
-    song = models.ForeignKey(SavedSong, to_field= 'songID', on_delete=models.CASCADE ,)
+    song = models.ForeignKey(SavedSong, to_field='songID', on_delete=models.CASCADE ,)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     content = models.TextField(max_length=280)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -5,7 +5,6 @@ urlpatterns = [
      path('apparitions', ApparitionListView.as_view()),
      path('apparitions/create', ApparitionCreateView.as_view()),
      path('apparitions/<int:songID>', ApparitionSongListView.as_view()),
-     #path('<pk>', ApparitionDetailView.as_view()),
      path('songs', SavedSongsView.as_view()),
      path('songs/all', SavedSongsListView.as_view()),
 ]
