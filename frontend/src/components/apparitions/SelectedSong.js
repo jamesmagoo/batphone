@@ -1,26 +1,26 @@
 import React, { Component, useContext } from 'react';
-import { ApparitionContext} from '../../ApparitionContext';
+import { Consumer } from '../../context';
 
-
-
-const SelectedSong = () => {
-
-    const value = useContext(ApparitionContext);
-
+ 
+const SelectedSong = (props) => {
     return (
-        <div>
-            <React.Fragment>
-               <div className="card mb-4 shadow-sm">
-                <div className="card-body">
-                    <h3>...seeing now</h3>
-                    <h1>{value.songID}</h1>
-                    <br></br>
-                    <h6>{value.track} by {value.artist}</h6>
-                </div>
-            </div>               
-            </React.Fragment>
-        </div>
+        <Consumer>
+            {value=>{
+                return(
+                    <div className="card mb-4 shadow-sm">
+                        <div className="card-body">
+                            <h3>...seeing now</h3>
+                            <h8>{value.songID}</h8>
+                            <br></br>
+                            <h1>{value.track} by {value.artist}</h1>
+                        </div>
+                    </div>   
+                    )
+            }}           
+        </Consumer>
     )
+    
 }
+
 
 export default SelectedSong;

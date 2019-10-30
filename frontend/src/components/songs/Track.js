@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom' ;
 const Track = (props) => {
     const { track } = props;
 
-
     return (
             <div className="card mb-2 shadow-sm" >
                <div className="card-body" > 

@@ -1,27 +1,54 @@
-import React, { Component, useContext} from 'react';
-//import { ApparitionContext } from '../../ApparitionContext';
+import React, { Component} from 'react';
 
 class ApparitionInput extends Component {
+ constructor(props){
+     super(props);
+     this.state ={
+         user:'',
+         apparition:'',
+         songID:''
+     };
+     this.onChange = this.onChange.bind(this);
+     this.onSubmit = this.onSubmit.bind(this);
+ }
+    onChange(e){
+        this.setState({ apparition: e.target.value })
+    }
 
-    // submitApparition = (e) =>{
+    onSubmit(e){
+        e.preventDefault();
 
-    // }
+        const post ={
+            apparition : this.state.apparition
+        }
 
-    //static context = ApparitionContext; 
+        fetch('apparition/api/post', {
+            method : 'POST',
+            headers: {
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(post)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+
+    }
+
 
     render() {
-        //let value = this.context;
         return (
             <div className="card card-body mb-4 p-4 text-center">
-                            <div className="form-group">
+                <form onSubmit = {this.onSubmit}>
+                       <div className="form-group">
                                 <input type="text" 
                                 className="form-control" 
                                 name="apparitionInput"
-                                //placeholder={value.songID}
-                                //value={null}
-                                //onChange={null}
+                                onChange={this.onChange}
+                                placeholder = 'Create an Apparition...'
+                                value={this.state.apparition}
                                 />
-                            </div>
+                        </div>     
+                </form>
                     <button className="btn btn-dark mb" type="submit" htmlType="submit" /**onClick={(event) => this.submitApparition(event)}*/>Plus EYE LOGO</button>
             </div> 
         )

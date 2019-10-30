@@ -14,15 +14,21 @@ const reducer = (state, action) =>{
             default:
                 return state;
 
+        case 'SELECTED_TRACK':
+            return{
+                
+            };
+
     }
 }
 
 export class Provider extends Component {
     state ={
-        track_list: [
-        
-        ],
-
+        track_list: [],
+        apparitions:[],
+        track: 'Star Treatment',
+        artist:'Arctic Monkeys',
+        songID:'12344689',
         heading: "Songs",
         dispatch : action => this.setState(state => reducer(state, action))
     };
@@ -35,8 +41,8 @@ export class Provider extends Component {
             this.setState({track_list : res.data.message.body.track_list});
         })
         .catch(err => console.log(err)) ;
-  
     }
+
 
     render() {
         return (

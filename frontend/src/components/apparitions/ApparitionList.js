@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ApparitionContext } from '../../ApparitionContext';
+import { Consumer } from '../../context';
 import Spinner from '../layout/Spinner';
 import Apparition from './Apparition';
 
@@ -10,7 +10,7 @@ class ApparitionList extends Component {
         return (
             <div>
                 <React.Fragment>
-                    <ApparitionContext>
+                    <Consumer>
                         { value => {
                             const{apparitions} = value;
 
@@ -30,7 +30,7 @@ class ApparitionList extends Component {
                                 )
                             }
                         }}
-                    </ApparitionContext>
+                    </Consumer>
                 </React.Fragment>
             
             </div>

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Consumer } from '../../context';
 
  class SearchSongs extends Component {
-    state = {
+    state = { 
         songTitle: ''
     }
 

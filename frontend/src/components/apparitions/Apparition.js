@@ -3,8 +3,8 @@ import Fade from 'react-reveal/Fade';
 
 const Apparition = (props) =>{
 
-   const { apparition } = props;
-   
+   const {apparition} = props;
+
     return (
         <Fade bottom>
                <div className="mb-4">
